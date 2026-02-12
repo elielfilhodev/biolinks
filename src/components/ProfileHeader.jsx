@@ -76,7 +76,7 @@ const ProfileHeader = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
                 >
-                    <MapPin size={12} />
+                    <img src="/brazil.png" alt="Brazil Flag" className="w-5 h-auto object-contain" />
                     {profileData.location}
                 </motion.div>
             </div>
