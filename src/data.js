@@ -1,6 +1,4 @@
 
-import { Github, Linkedin, Twitter, Instagram, Youtube, Twitch, Gamepad2, Code2, Terminal, Cpu } from 'lucide-react';
-
 export const profileData = {
     name: "Eliel Filho",
     role: "Frontend Developer & Designer",
@@ -14,42 +12,42 @@ export const socialLinks = [
         id: 1,
         platform: "GitHub",
         url: "https://github.com/elielfilhodev",
-        icon: Github,
+        icon: "/github.svg",
         color: "#333"
     },
     {
         id: 2,
         platform: "X",
         url: "https://x.com/hxssonyyy",
-        icon: Twitter,
-        color: "#3f3f3fff"
+        icon: "/x.png",
+        color: "#000000"
     },
     {
         id: 3,
         platform: "TikTok",
         url: "https://tiktok.com/@elielviolin",
-        icon: Terminal, // Placeholder icon if brand icon not available in lucide immediately
+        icon: "/tiktok.png",
         color: "#000000"
     },
     {
         id: 4,
         platform: "YouTube",
         url: "https://youtube.com/@elielfilhodev",
-        icon: Youtube,
+        icon: "/youtube.png",
         color: "#FF0000"
     },
     {
         id: 5,
         platform: "Twitch",
         url: "https://twitch.tv/hxssonyy",
-        icon: Twitch,
+        icon: "/twitch.png",
         color: "#9146FF"
     },
     {
         id: 6,
         platform: "Instagram",
         url: "https://instagram.com/elielfilho.dev",
-        icon: Instagram,
+        icon: "/instagram.png",
         color: "#E1306C"
     }
 ];

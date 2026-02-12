@@ -10,32 +10,6 @@ const Background = () => {
 
             {/* Grid overlay for texture */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-
-            {/* Snow Particles */}
-            <div className="absolute inset-0 pointer-events-none">
-                {[...Array(40)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute bg-white rounded-full opacity-20"
-                        initial={{
-                            top: -10,
-                            left: `${Math.random() * 100}%`,
-                            width: Math.random() * 3 + 1 + "px",
-                            height: Math.random() * 3 + 1 + "px",
-                            opacity: Math.random() * 0.3 + 0.1,
-                        }}
-                        animate={{
-                            top: "90%",
-                        }}
-                        transition={{
-                            duration: Math.random() * 15 + 10, // 10-25s duration (slow)
-                            repeat: Infinity,
-                            ease: "linear",
-                            delay: Math.random() * 15, // Random start delay
-                        }}
-                    />
-                ))}
-            </div>
         </div>
     );
 };
