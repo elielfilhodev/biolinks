@@ -6,37 +6,6 @@ import { MapPin } from 'lucide-react';
 const ProfileHeader = () => {
     const nameLetters = profileData.name.split('');
 
-    // Glitch animation variants
-    const glitchVariants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                delay: i * 0.05,
-            }
-        }),
-        glitch: {
-            textShadow: [
-                "0px 0px 0px rgba(0,0,0,0)",
-                "-2px 0px 0px rgba(255,0,0,0.7), 2px 0px 0px rgba(0,0,255,0.7)",
-                "0px 0px 0px rgba(0,0,0,0)",
-                "2px 0px 0px rgba(255,0,0,0.7), -2px 0px 0px rgba(0,0,255,0.7)",
-                "0px 0px 0px rgba(0,0,0,0)"
-            ],
-            x: [0, -2, 2, -1, 0],
-            y: [0, 1, -1, 0],
-            skewX: [0, 10, -10, 0],
-            opacity: [1, 0.8, 1, 0.9, 1],
-            transition: {
-                duration: 0.4,
-                repeat: Infinity,
-                repeatDelay: Math.random() * 3 + 2, // Random delay between glitches
-                ease: "linear"
-            }
-        }
-    };
-
     return (
         <div className="flex flex-col items-center text-center gap-4 relative z-10 w-full mb-4">
 
@@ -71,11 +40,19 @@ const ProfileHeader = () => {
                     {nameLetters.map((letter, index) => (
                         <motion.span
                             key={index}
-                            custom={index}
-                            variants={glitchVariants}
-                            initial="hidden"
-                            animate={["visible", "glitch"]}
-                            className="inline-block relative"
+                            initial={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+                            animate={{
+                                filter: ["blur(0px)", "blur(8px)", "blur(0px)"],
+                                opacity: [1, 0, 1],
+                                y: [0, -5, 0]
+                            }}
+                            transition={{
+                                duration: 4,
+                                repeat: Infinity,
+                                delay: index * 0.15,
+                                repeatDelay: 2
+                            }}
+                            className="inline-block"
                         >
                             {letter === " " ? "\u00A0" : letter}
                         </motion.span>
