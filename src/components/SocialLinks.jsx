@@ -21,7 +21,7 @@ const SocialLinks = () => {
                 >
                     <div className="flex items-center gap-3">
                         <div
-                            className="w-10 h-10 rounded-full flex items-center justify-center text-white relative overflow-hidden bg-white/5 p-2"
+                            className="w-10 h-10 rounded-lg flex items-center justify-center text-white relative overflow-hidden bg-white/5 p-2"
                             style={{ backgroundColor: `${link.color}20` }}
                         >
                             {typeof link.icon === 'string' ? (

@@ -12,7 +12,7 @@ export const socialLinks = [
         id: 1,
         platform: "GitHub",
         url: "https://github.com/elielfilhodev",
-        icon: "/github.svg",
+        icon: "/github-w.webp",
         color: "#333"
     },
     {
